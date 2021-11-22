@@ -8,7 +8,6 @@ from joblib import Parallel, delayed
 # Filter extraordinary values, set depends on your env
 _MAX_DISTANCE_MM = 10000
 # Motor speed, 70 +-1 is working best for me, should be finetuned perfectly
-# cause <68 and 74> in my case are not working at all
 # this constant means PWM value from 0 to 255, compatible with arduino sketch
 _MOTOR_START_SPEED = 75 
 _MOTOR_TARGET_SPEED = 30500 # not used for now

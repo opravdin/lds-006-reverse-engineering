@@ -16,8 +16,11 @@
 
 int motorPWM = 0; 
 byte pinOut = 10; 
-byte led = 13;
+byte led = LED_BUILTIN;
 
+/**
+ * Incoming request structure
+ */
 struct setupData {
   byte header;
   byte motorSpeed;
@@ -46,6 +49,8 @@ void loop() {
     }
     Serial.write(motorPWM);
     analogWrite(pinOut, motorPWM);
+
+    // Light up the built-in LED if motor is turned on
     if (motorPWM > 0) {
       digitalWrite(led, HIGH);
     } else {
