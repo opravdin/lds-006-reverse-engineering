@@ -5,6 +5,8 @@ motor control program for Arduino-compatible board
 
 ## How to use
 ### Motor control
+#### Warning! Section is deprecated! It's enough to send just "startlds$" string to UART and lidar will start spinning by itself!
+
 For now, it is not yet known how to activate the motor via UART.
 To solve this, I have made a simple Arduino sketch that is listening to the same UART line as the lidar itself.
 It is looking for the specific parcel:  
